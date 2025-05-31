@@ -36,7 +36,7 @@ function minEnergy(
 
     // Walk to shop or walk to station
     const energyToStation = calEnergyToNearestStation(current, stations);
-    const directWalkDiff = shop - current;
+    const directWalkDiff = Math.abs(shop - current);
     if (isAtStation(shop, stations)) {
       if (directWalkDiff < energyToStation) {
         // Walk directly to the shop
